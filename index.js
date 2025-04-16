@@ -6,16 +6,16 @@ const cors = require('cors');
 const { Server } = require('socket.io');
 
 app.use(cors({
-  origin: "https://messagingapp-purk.onrender.com", // Updated origin to match front-end port
+  origin: "http://localhost:3000", // Updated origin to match front-end port
   methods: ["GET", "POST"],
 }));
 
 const server = http.createServer(app);
 
 const io = new Server(server, { 
-  cors: { 
-    origin: "https://messagingapp-purk.onrender.com", // Updated origin to match front-end port
-    methods: ["GET", "POST"],
+    cors: { 
+      origin: "http://localhost:3000", // Updated origin to match front-end port
+      methods: ["GET", "POST"], 
   },
 });
 
